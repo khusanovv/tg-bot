@@ -4,10 +4,10 @@ const Api = "1665840542:AAHAIoi8GXucpLyjlF8bwmTcrWJEd-RmS2gnpm"
 
 const bot = new TelegramBot(Api)
 
-// const Promise = require('bluebird');
-// Promise.config({
-//   cancellation: true
-// });
+const Promise = require('bluebird');
+ Promise.config({
+  cancellation: true
+});
 
 bot.onText(/\/start/, (msg) =>{
     bot.sendMessage(msg.chat.id, "salom" + msg.from.first_name || '', {
